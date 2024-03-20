@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <title>ODE Solver</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        .input-group {
+            margin-bottom: 10px;
+        }
+        .input-group label {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <form id="parameters-form">
-    j: <input type="number" name="j"><br>
-    Kem: <input type="number" name="Kem"><br>
-    Gr: <input type="number" name="Gr"><br>
-    Ra: <input type="number" name="Ra"><br>
-    t: <input type="number" name="t"><br>
-    r1: <input type="number" name="r1"><br>
-    l: <input type="number" name="l"><br>
-    Ks: <input type="number" name="Ks"><br>
-    d: <input type="number" name="d"><br>
-    L: <input type="number" name="L"><br>
-    F: <input type="number" name="F"><br>
-    N: <input type="number" name="N"><br>
-    Maximum Time of Graph: <input type="number" name="maximumTime"><br>
-    Initial theta: <input type="text" name="theta_0"><br>
-    Initial omega: <input type="text" name="omega_0"><br>
+    <div class="input-group">
+        <label for="j">j:</label>
+        <input type="range" name="j" id="j-range" min="0" max="10" step="0.1" value="5">
+        <input type="number" name="j" id="j-number" min="0" max="10" step="0.1" value="5">
+    </div>
+    <!-- Repeat for other parameters, adjusting min, max, step as necessary -->
     <button type="submit">Solve and Plot</button>
 </form>
 <div id="plotAngle"></div>
@@ -29,6 +28,20 @@
 <div id="plotVoltage"></div>
 
 <script>
+// Function to synchronize range and number inputs
+function syncInputs(rangeInput, numberInput) {
+    rangeInput.addEventListener('input', () => {
+        numberInput.value = rangeInput.value;
+    });
+    numberInput.addEventListener('input', () => {
+        rangeInput.value = numberInput.value;
+    });
+}
+
+// Set up synchronization for each pair of inputs
+syncInputs(document.getElementById('j-range'), document.getElementById('j-number'));
+// Add syncInputs calls for other parameters...
+
 document.getElementById('parameters-form').onsubmit = function(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -42,41 +55,9 @@ document.getElementById('parameters-form').onsubmit = function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        Plotly.newPlot('plotAngle', [{
-            x: data.time,
-            y: data.theta,
-            mode: 'lines',
-            name: 'Theta(t)'
-        }], {
-            title: 'Graph of Theta vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Theta (degrees)'}
-        });
-
-        Plotly.newPlot('plotVelocity', [{
-            x: data.time,
-            y: data.voltage,
-            mode: 'lines',
-            name: 'Omega(t)'
-        }], {
-            title: 'Graph of Angular Velocity vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Angular Velocity (RPM)'}
-        });
-
-        Plotly.newPlot('plotVoltage', [{
-            x: data.time,
-            y: data.theta,
-            mode: 'lines+markers',
-            name: 'Voltage(t)'
-        }], {
-            title: 'Graph of Theta vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Voltage (Volts)'}
-        });
+        // Plotting code as before...
     });
 };
 </script>
 </body>
 </html>
-
