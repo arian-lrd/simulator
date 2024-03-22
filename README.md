@@ -1,4 +1,4 @@
-Code for a simulator solving ODE of a door in motion, equipped with a custom-built door damper developed by Seneca Polytechnic and SmartOnes Solutions.
+Code for a simulator solving ODE (Ordinary Differential Equation) of a door in motion, using the Runge-Kutta 45 method. The door is equipped with a custom-built door damper developed by Seneca Polytechnic researchers in collaboration with SmartOnes Solutions.
 
 Outputs:
 Three graphs, predicting varying information of interest. These include:
