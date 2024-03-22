@@ -15,7 +15,7 @@
 
     <div class="input-group" style="grid-column: 1 ;">
         <label for="j">j:</label>
-        <input type="range" id="j-range" min="0" max="100" step="0.1" value="1" list="values">
+        <input type="range" id="j-range" min="0" max="1000" step="0.1" value="1" list="values">
         <input type="number" name="j" id="j-number" min="0" max="100" step="0.1" value="1">
         <datalist id="j-values">
             <option value="0" label="very cold!"></option>
@@ -27,8 +27,8 @@
     </div>
     <div class="input-group" style="grid-column: 1;">
         <label for="Kem">Kem:</label>
-        <input type="range" id="Kem-range" min="0" max="20" step="0.1" value="8.6">
-        <input type="number" name="Kem" id="Kem-number" min="0" max="20" step="0.1" value="8.6">
+        <input type="range" id="Kem-range" min="0" max="200" step="0.1" value="8.6">
+        <input type="number" name="Kem" id="Kem-number" min="0" max="200" step="0.1" value="8.6">
     </div>
     <div class="input-group" style="grid-column: 1 ;">
         <label for="Gr">Gr:</label>
@@ -42,8 +42,8 @@
     </div>
     <div class="input-group" style="grid-column: 1 ;">
         <label for="t">t:</label>
-        <input type="range" id="t-range" min="0" max="100" step="0.1" value="1">
-        <input type="number" name="t" id="t-number" min="0" max="100" step="0.1" value="1">
+        <input type="range" id="t-range" min="0" max="100" step="0.01" value="1">
+        <input type="number" name="t" id="t-number" min="0" max="100" step="0.01" value="1">
     </div>
     </div>
 
@@ -51,28 +51,28 @@
     <div class="input-column">
     <div class="input-group" style="grid-column: 2 ;">
         <label for="r1">r1:</label>
-        <input type="range" id="r1-range" min="0" max="20" step="0.1" value="8.6">
-        <input type="number" name="r1" id="r1-number" min="0" max="20" step="0.1" value="8.6">
+        <input type="range" id="r1-range" min="0" max="20" step="0.01" value="8.6">
+        <input type="number" name="r1" id="r1-number" min="0" max="20" step="0.01" value="8.6">
     </div>
     <div class="input-group" style="grid-column: 2 ;">
         <label for="l">l:</label>
-        <input type="range" id="l-range" min="0" max="50" step="1" value="10">
-        <input type="number" name="l" id="l-number" min="0" max="50" step="1" value="10">
+        <input type="range" id="l-range" min="0" max="50" step="0.001" value="10">
+        <input type="number" name="l" id="l-number" min="0" max="50" step="0.001" value="10">
     </div>
     <div class="input-group" style="grid-column: 2 ;">
         <label for="Ks">Ks:</label>
-        <input type="range" id="Ks-range" min="0" max="100" step="1" value="50">
-        <input type="number" name="Ks" id="Ks-number" min="0" max="100" step="1" value="50">
+        <input type="range" id="Ks-range" min="0" max="10000" step="1" value="50">
+        <input type="number" name="Ks" id="Ks-number" min="0" max="10000" step="1" value="50">
     </div>
     <div class="input-group" style="grid-column: 2 ;">
         <label for="d">d:</label>
-        <input type="range" id="d-range" min="0" max="100" step="0.1" value="1">
-        <input type="number" name="d" id="d-number" min="0" max="100" step="0.1" value="1">
+        <input type="range" id="d-range" min="0" max="100" step="0.01" value="1">
+        <input type="number" name="d" id="d-number" min="0" max="100" step="0.01" value="1">
     </div>
     <div class="input-group" style="grid-column: 2 ;">
         <label for="L">L:</label>
-        <input type="range" id="L-range" min="0" max="20" step="0.1" value="8.6">
-        <input type="number" name="L" id="L-number" min="0" max="20" step="0.1" value="8.6">
+        <input type="range" id="L-range" min="0" max="20" step="0.001" value="8.6">
+        <input type="number" name="L" id="L-number" min="0" max="20" step="0.001" value="8.6">
     </div>
     </div>
 
@@ -83,8 +83,8 @@
         <input type="number" name="F" id="F-number" min="0" max="50" step="1" value="10">
     <div class="input-group" style="grid-column: 3 ;">
         <label for="N">N:</label>
-        <input type="range" id="N-range" min="0" max="100" step="1" value="50">
-        <input type="number" name="N" id="N-number" min="0" max="100" step="1" value="50">
+        <input type="range" id="N-range" min="0" max="10000" step="1" value="50">
+        <input type="number" name="N" id="N-number" min="0" max="1000" step="1" value="50">
     </div>
 
     <!-- Repeat for the remaining parameters -->
@@ -95,13 +95,13 @@
     </div>
     <div class="input-group" style="grid-column: 3 ;">
         <label for="theta_0">Initial theta:</label>
-        <input type="range" id="theta_0-range" min="-10" max="10" step="0.1" value="0">
-        <input type="number" name="theta_0" id="theta_0-number" min="-10" max="10" step="0.1" value="0">
+        <input type="range" id="theta_0-range" min="-10" max="100" step="0.01" value="0">
+        <input type="number" name="theta_0" id="theta_0-number" min="-10" max="100" step="0.1" value="0">
     </div>
     <div class="input-group" style="grid-column: 3 ;">
         <label for="omega_0">Initial omega:</label>
-        <input type="range" id="omega_0-range" min="-10" max="10" step="0.1" value="0">
-        <input type="number" name="omega_0" id="omega_0-number" min="-10" max="10" step="0.1" value="0">
+        <input type="range" id="omega_0-range" min="-10" max="10" step="0.01" value="0">
+        <input type="number" name="omega_0" id="omega_0-number" min="-10" max="10" step="0.01" value="0">
     </div>
     </div>
     <button type="submit">Solve and Plot</button>
