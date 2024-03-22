@@ -15,7 +15,6 @@ def solve_ode():
     data = request.json
     j = float(data['j'])
     Kem = float(data['Kem'])
-    Gr = float(data['Gr'])
     Ra = float(data['Ra'])
     t = float(data['t'])
     r1 = float(data['r1'])

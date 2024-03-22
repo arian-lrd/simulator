@@ -17,23 +17,11 @@
         <label for="j">j:</label>
         <input type="range" id="j-range" min="0" max="1000" step="0.1" value="1" list="values">
         <input type="number" name="j" id="j-number" min="0" max="100" step="0.1" value="1">
-        <datalist id="j-values">
-            <option value="0" label="very cold!"></option>
-            <option value="25" label="cool"></option>
-            <option value="50" label="medium"></option>
-            <option value="75" label="getting warm!"></option>
-            <option value="100" label="hot!"></option>
-          </datalist>
     </div>
     <div class="input-group" style="grid-column: 1;">
         <label for="Kem">Kem:</label>
         <input type="range" id="Kem-range" min="0" max="200" step="0.1" value="8.6">
         <input type="number" name="Kem" id="Kem-number" min="0" max="200" step="0.1" value="8.6">
-    </div>
-    <div class="input-group" style="grid-column: 1 ;">
-        <label for="Gr">Gr:</label>
-        <input type="range" id="Gr-range" min="0" max="50" step="1" value="10">
-        <input type="number" name="Gr" id="Gr-number" min="0" max="50" step="1" value="10">
     </div>
     <div class="input-group" style="grid-column: 1 ;">
         <label for="Ra">Ra:</label>
@@ -96,7 +84,7 @@
     <div class="input-group" style="grid-column: 3 ;">
         <label for="theta_0">Initial theta:</label>
         <input type="range" id="theta_0-range" min="-10" max="100" step="0.01" value="0">
-        <input type="number" name="theta_0" id="theta_0-number" min="-10" max="100" step="0.1" value="0">
+        <input type="number" name="theta_0" id="theta_0-number" min="-10" max="100" step="0.01" value="0">
     </div>
     <div class="input-group" style="grid-column: 3 ;">
         <label for="omega_0">Initial omega:</label>
@@ -127,10 +115,9 @@
     }
     
     // Set up synchronization for each pair of inputs
-    // j, kem, Gr, Ra, t, r1, l, Ks, d, L, F, N
+    // j, kem, Ra, t, r1, l, Ks, d, L, F, N
     syncInputs(document.getElementById('j-range'), document.getElementById('j-number'));
     syncInputs(document.getElementById('Kem-range'), document.getElementById('Kem-number'));
-    syncInputs(document.getElementById('Gr-range'), document.getElementById('Gr-number'));
     syncInputs(document.getElementById('Ra-range'), document.getElementById('Ra-number'));
     
 
