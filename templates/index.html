@@ -3,80 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <title>ODE Solver</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" title="style" /> 
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ 
 </head>
 <body>
+<div id="user">
 <form id="parameters-form">
-    j: <input type="number" name="j"><br>
-    Kem: <input type="number" name="Kem"><br>
-    Gr: <input type="number" name="Gr"><br>
-    Ra: <input type="number" name="Ra"><br>
-    t: <input type="number" name="t"><br>
-    r1: <input type="number" name="r1"><br>
-    l: <input type="number" name="l"><br>
-    Ks: <input type="number" name="Ks"><br>
-    d: <input type="number" name="d"><br>
-    L: <input type="number" name="L"><br>
-    F: <input type="number" name="F"><br>
-    N: <input type="number" name="N"><br>
-    Maximum Time of Graph: <input type="number" name="maximumTime"><br>
-    Initial theta: <input type="text" name="theta_0"><br>
-    Initial omega: <input type="text" name="omega_0"><br>
+
+    <div class="input-column">
+
+    <div class="input-group" style="grid-column: 1 ;">
+        <label for="j">j (Kilogram Meter Squared):</label>
+        <input type="range" id="j-range" min="0" max="1000" step="0.1" value="1" list="values">
+        <input type="number" name="j" id="j-number" min="0" max="100" step="0.1" value="1">
+    </div>
+    <div class="input-group" style="grid-column: 1;">
+        <label for="Kem">Kem (volt-sec/rad):</label>
+        <input type="range" id="Kem-range" min="0" max="200" step="0.1" value="8.6">
+        <input type="number" name="Kem" id="Kem-number" min="0" max="200" step="0.1" value="8.6">
+    </div>
+    <div class="input-group" style="grid-column: 1 ;">
+        <label for="Ra">Ra (Ohms):</label>
+        <input type="range" id="Ra-range" min="0" max="100" step="1" value="50">
+        <input type="number" name="Ra" id="Ra-number" min="0" max="100" step="1" value="50">
+    </div>
+    <div class="input-group" style="grid-column: 1 ;">
+        <label for="t">t (Meters):</label>
+        <input type="range" id="t-range" min="0" max="100" step="0.01" value="1">
+        <input type="number" name="t" id="t-number" min="0" max="100" step="0.01" value="1">
+    </div>
+    </div>
+
+
+    <div class="input-column">
+    <div class="input-group" style="grid-column: 2 ;">
+        <label for="r1">r1 (meters):</label>
+        <input type="range" id="r1-range" min="0" max="20" step="0.01" value="8.6">
+        <input type="number" name="r1" id="r1-number" min="0" max="20" step="0.01" value="8.6">
+    </div>
+    <div class="input-group" style="grid-column: 2 ;">
+        <label for="l">l (meters):</label>
+        <input type="range" id="l-range" min="0" max="50" step="0.001" value="10">
+        <input type="number" name="l" id="l-number" min="0" max="50" step="0.001" value="10">
+    </div>
+    <div class="input-group" style="grid-column: 2 ;">
+        <label for="Ks">Ks (Newtons per Meter):</label>
+        <input type="range" id="Ks-range" min="0" max="10000" step="1" value="50">
+        <input type="number" name="Ks" id="Ks-number" min="0" max="10000" step="1" value="50">
+    </div>
+    <div class="input-group" style="grid-column: 2 ;">
+        <label for="d">d (meters):</label>
+        <input type="range" id="d-range" min="0" max="100" step="0.01" value="1">
+        <input type="number" name="d" id="d-number" min="0" max="100" step="0.01" value="1">
+    </div>
+    <div class="input-group" style="grid-column: 2 ;">
+        <label for="L">L (meters):</label>
+        <input type="range" id="L-range" min="0" max="20" step="0.001" value="8.6">
+        <input type="number" name="L" id="L-number" min="0" max="20" step="0.001" value="8.6">
+    </div>
+    </div>
+
+    <div class="input-column" >
+    <div class="input-group" style="grid-column: 3 ;">
+        <label for="F">F (Newtons):</label>
+        <input type="range" id="F-range" min="0" max="50" step="1" value="10">
+        <input type="number" name="F" id="F-number" min="0" max="50" step="1" value="10">
+    <div class="input-group" style="grid-column: 3 ;">
+        <label for="N">Number of Motors:</label>
+        <input type="range" id="N-range" min="0" max="10000" step="1" value="50">
+        <input type="number" name="N" id="N-number" min="0" max="1000" step="1" value="50">
+    </div>
+
+    <!-- Repeat for the remaining parameters -->
+    <div class="input-group" style="grid-column: 3 ;">
+        <label for="maximumTime">Maximum Time of Graph (Seconds):</label>
+        <input type="range" id="maximumTime-range" min="1" max="100" step="1" value="10">
+        <input type="number" name="maximumTime" id="maximumTime-number" min="1" max="60" step="1" value="10">
+    </div>
+    <div class="input-group" style="grid-column: 3 ;">
+        <label for="theta_0">Initial theta (Radians):</label>
+        <input type="range" id="theta_0-range" min="-10" max="100" step="0.01" value="0">
+        <input type="number" name="theta_0" id="theta_0-number" min="-10" max="100" step="0.01" value="0">
+    </div>
+    <div class="input-group" style="grid-column: 3 ;">
+        <label for="omega_0">Initial omega:</label>
+        <input type="range" id="omega_0-range" min="-10" max="10" step="0.01" value="0">
+        <input type="number" name="omega_0" id="omega_0-number" min="-10" max="10" step="0.01" value="0">
+    </div>
+    </div>
     <button type="submit">Solve and Plot</button>
 </form>
-<div id="plotAngle"></div>
-<div id="plotVelocity"></div>
-<div id="plotVoltage"></div>
+</div>
+
+<div class="graphs">
+    
+    <div id="plotAngle"></div>
+    <div id="plotVelocity"></div>
+    <div id="plotVoltage"></div>
+</div>
 
 <script>
-document.getElementById('parameters-form').onsubmit = function(e) {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    fetch('/solve', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-        Plotly.newPlot('plotAngle', [{
-            x: data.time,
-            y: data.theta,
-            mode: 'lines',
-            name: 'Theta(t)'
-        }], {
-            title: 'Graph of Theta vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Theta (degrees)'}
+    // Function to synchronize range and number inputs
+    function syncInputs(rangeInput, numberInput) {
+        rangeInput.addEventListener('input', () => {
+            numberInput.value = rangeInput.value;
         });
-
-        Plotly.newPlot('plotVelocity', [{
-            x: data.time,
-            y: data.voltage,
-            mode: 'lines',
-            name: 'Omega(t)'
-        }], {
-            title: 'Graph of Angular Velocity vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Angular Velocity (RPM)'}
+        numberInput.addEventListener('input', () => {
+            rangeInput.value = numberInput.value;
         });
+    }
+    
+    // Set up synchronization for each pair of inputs
+    // j, kem, Ra, t, r1, l, Ks, d, L, F, N
+    syncInputs(document.getElementById('j-range'), document.getElementById('j-number'));
+    syncInputs(document.getElementById('Kem-range'), document.getElementById('Kem-number'));
+    syncInputs(document.getElementById('Ra-range'), document.getElementById('Ra-number'));
+    
 
-        Plotly.newPlot('plotVoltage', [{
-            x: data.time,
-            y: data.theta,
-            mode: 'lines+markers',
-            name: 'Voltage(t)'
-        }], {
-            title: 'Graph of Theta vs. Time',
-            xaxis: {title: 'Time (t)'},
-            yaxis: {title: 'Voltage (Volts)'}
+    syncInputs(document.getElementById('t-range'), document.getElementById('t-number'));
+    syncInputs(document.getElementById('r1-range'), document.getElementById('r1-number'));
+    syncInputs(document.getElementById('l-range'), document.getElementById('l-number'));
+    syncInputs(document.getElementById('Ks-range'), document.getElementById('Ks-number'));
+    syncInputs(document.getElementById('d-range'), document.getElementById('d-number'));
+    syncInputs(document.getElementById('L-range'), document.getElementById('L-number'));
+    syncInputs(document.getElementById('F-range'), document.getElementById('F-number'));
+    syncInputs(document.getElementById('N-range'), document.getElementById('N-number'));
+
+
+    syncInputs(document.getElementById('maximumTime-range'), document.getElementById('maximumTime-number'));
+    syncInputs(document.getElementById('theta_0-range'), document.getElementById('theta_0-number'));
+    syncInputs(document.getElementById('omega_0-range'), document.getElementById('omega_0-number'));
+    
+    document.getElementById('parameters-form').onsubmit = function(e) {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+    
+        fetch('/solve', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            Plotly.newPlot('plotAngle', [{
+                x: data.time,
+                y: data.theta,
+                mode: 'lines',
+                name: 'Theta(t)'
+            }], {
+                title: 'Graph of Theta vs. Time',
+                xaxis: {title: 'Time (t)'},
+                yaxis: {title: 'Theta (degrees)'}
+            });
+    
+            Plotly.newPlot('plotVelocity', [{
+                x: data.time,
+                y: data.omega,
+                mode: 'lines',
+                name: 'Omega(t)'
+            }], {
+                title: 'Graph of Angular Velocity vs. Time',
+                xaxis: {title: 'Time (t)'},
+                yaxis: {title: 'Angular Velocity (RPM)'}
+            });
+    
+            Plotly.newPlot('plotVoltage', [{
+                x: data.time,
+                y: data.voltage,
+                mode: 'lines+markers',
+                name: 'Voltage(t)'
+            }], {
+                title: 'Graph of Voltage vs. Time',
+                xaxis: {title: 'Time (t)'},
+                yaxis: {title: 'Voltage (Volts)'}
+            });
         });
-    });
-};
-</script>
-</body>
-</html>
-
+    };
+    </script>
+    
