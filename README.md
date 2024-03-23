@@ -23,8 +23,8 @@ Inputs:
 # Key notes from deployment:
 
 ## app.py code differences: 
--> The app.py code on the server is slightly different, it is as follows:
-**1) app routes the beginning of the code:**
+-> The app.py code on the server is slightly different, it is as follows:  
+**1) app routes the beginning of the code:**  
 app = Flask(__name__)
 
 @app.route('/smartone')
