@@ -1,0 +1,3699 @@
+Last login: Fri Mar 22 09:37:54 on ttys001
+➜  ~ ssh root@arianamiri.com
+Enter passphrase for key '/Users/ARIAN/.ssh/id_ed25519': 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 02:32:22 PM UTC 2024
+
+  System load:             0.0
+  Usage of /:              31.3% of 22.88GB
+  Memory usage:            21%
+  Swap usage:              0%
+  Processes:               122
+  Users logged in:         0
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Mar 22 13:48:57 2024 from 99.241.6.34
+root@server01:~# nano /etc/sshd_config
+root@server01:~# cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
+systemd-network:x:101:102:systemd Network Management,,,:/run/systemd:/usr/sbin/nologin
+systemd-resolve:x:102:103:systemd Resolver,,,:/run/systemd:/usr/sbin/nologin
+messagebus:x:103:104::/nonexistent:/usr/sbin/nologin
+systemd-timesync:x:104:105:systemd Time Synchronization,,,:/run/systemd:/usr/sbin/nologin
+pollinate:x:105:1::/var/cache/pollinate:/bin/false
+sshd:x:106:65534::/run/sshd:/usr/sbin/nologin
+syslog:x:107:113::/home/syslog:/usr/sbin/nologin
+uuidd:x:108:114::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:109:115::/nonexistent:/usr/sbin/nologin
+tss:x:110:116:TPM software stack,,,:/var/lib/tpm:/bin/false
+landscape:x:111:117::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:112:118:fwupd-refresh user,,,:/run/systemd:/usr/sbin/nologin
+usbmux:x:113:46:usbmux daemon,,,:/var/lib/usbmux:/usr/sbin/nologin
+ubuntu:x:1000:1000:guest:/home/ubuntu:/bin/bash
+lxd:x:999:100::/var/snap/lxd/common/lxd:/bin/false
+linuxuser:x:1001:1001:Linux User:/home/linuxuser:/bin/bash
+smartone:x:1002:1002:SmartOne Research Project,,,:/home/smartone:/bin/bash
+root@server01:~# 
+root@server01:~# nano /etc/ssh/ssh
+ssh_config                ssh_host_dsa_key.pub      ssh_host_rsa_key
+ssh_config.d/             ssh_host_ecdsa_key        ssh_host_rsa_key.pub
+sshd_config               ssh_host_ecdsa_key.pub    ssh_import_id
+sshd_config.d/            ssh_host_ed25519_key      
+ssh_host_dsa_key          ssh_host_ed25519_key.pub  
+root@server01:~# nano /etc/ssh/sshd_config
+root@server01:~# systemctl restart sshd
+root@server01:~# exit
+logout
+Connection to arianamiri.com closed.
+➜  ~ ssh smartone@arianamiri.com
+smartone@arianamiri.com's password: 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 02:36:43 PM UTC 2024
+
+  System load:             0.0
+  Usage of /:              31.3% of 22.88GB
+  Memory usage:            21%
+  Swap usage:              0%
+  Processes:               121
+  Users logged in:         0
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+smartone@server01:~$ exit
+logout
+Connection to arianamiri.com closed.
+➜  ~ cd ~/.ssh                  
+➜  .ssh ls
+id_ed25519	id_rsa		known_hosts
+id_ed25519.pub	id_rsa.pub	known_hosts.old
+➜  .ssh ssh-copy-id -i ~/.ssh/id_ed25519.pub username@server_ip_address
+ç
+➜  .ssh cd
+➜  ~ ssh-copy-id -i ~/.ssh/id_ed25519.pub smartone@arianamiri.com
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/Users/ARIAN/.ssh/id_ed25519.pub"
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+smartone@arianamiri.com's password: 
+
+Number of key(s) added:        1
+
+Now try logging into the machine, with:   "ssh 'smartone@arianamiri.com'"
+and check to make sure that only the key(s) you wanted were added.
+
+➜  ~ ssh 'smartone@arianamiri.com'
+Enter passphrase for key '/Users/ARIAN/.ssh/id_ed25519': 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 02:38:41 PM UTC 2024
+
+  System load:             0.080078125
+  Usage of /:              31.3% of 22.88GB
+  Memory usage:            21%
+  Swap usage:              0%
+  Processes:               121
+  Users logged in:         0
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Mar 22 14:36:44 2024 from 99.241.6.34
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+smartone@server01:~$ 
+smartone@server01:~$ mkdir simulator
+smartone@server01:~$ mkdir ^Cmplates
+smartone@server01:~$ ls
+simulator
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ mkdir templates
+smartone@server01:~/simulator$ mkdir static
+smartone@server01:~/simulator$ nano app.py
+smartone@server01:~/simulator$ cd static/
+smartone@server01:~/simulator/static$ nano style.css
+smartone@server01:~/simulator/static$ cd ../templates/
+smartone@server01:~/simulator/templates$ ls
+smartone@server01:~/simulator/templates$ nano index.html
+smartone@server01:~/simulator/templates$ cd
+smartone@server01:~$ ls
+simulator
+smartone@server01:~$ python3 -m venv ~/env/teton
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.10-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+
+Failing command: /home/smartone/env/teton/bin/python3
+
+smartone@server01:~$ apt install python3.10-venv
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+smartone@server01:~$ sudo apt install python3.10-venv
+[sudo] password for smartone: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  python3-pip-whl python3-setuptools-whl
+The following NEW packages will be installed:
+  python3-pip-whl python3-setuptools-whl python3.10-venv
+0 upgraded, 3 newly installed, 0 to remove and 14 not upgraded.
+Need to get 2,473 kB of archives.
+After this operation, 2,884 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-pip-whl all 22.0.2+dfsg-1ubuntu0.4 [1,680 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3-setuptools-whl all 59.6.0-1.2ubuntu0.22.04.1 [788 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 python3.10-venv amd64 3.10.12-1~22.04.3 [5,716 B]
+Fetched 2,473 kB in 0s (8,506 kB/s)   
+Selecting previously unselected package python3-pip-whl.
+(Reading database ... 120880 files and directories currently installed.)
+Preparing to unpack .../python3-pip-whl_22.0.2+dfsg-1ubuntu0.4_all.deb ...
+Unpacking python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Selecting previously unselected package python3-setuptools-whl.
+Preparing to unpack .../python3-setuptools-whl_59.6.0-1.2ubuntu0.22.04.1_all.deb ...
+Unpacking python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Selecting previously unselected package python3.10-venv.
+Preparing to unpack .../python3.10-venv_3.10.12-1~22.04.3_amd64.deb ...
+Unpacking python3.10-venv (3.10.12-1~22.04.3) ...
+Setting up python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.1) ...
+Setting up python3-pip-whl (22.0.2+dfsg-1ubuntu0.4) ...
+Setting up python3.10-venv (3.10.12-1~22.04.3) ...
+Scanning processes...                                                                    
+Scanning linux images...                                                                 
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+smartone@server01:~$ groups smartone
+smartone : smartone sudo
+smartone@server01:~$ sudo ls
+env  simulator
+smartone@server01:~$ sudo nano /etc/sudoers
+smartone@server01:~$ sudo ls
+smartone@server01:~$ sudo ls^C
+smartone@server01:~$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+smartone@server01:~$ python3 -m venv ~/env/teton
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$  source ~/env/teton/bin/activate
+(teton) smartone@server01:~$ pip install flask
+Collecting flask
+  Downloading flask-3.0.2-py3-none-any.whl (101 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.3/101.3 KB 2.4 MB/s eta 0:00:00
+Collecting blinker>=1.6.2
+  Downloading blinker-1.7.0-py3-none-any.whl (13 kB)
+Collecting itsdangerous>=2.1.2
+  Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
+Collecting Jinja2>=3.1.2
+  Downloading Jinja2-3.1.3-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.2/133.2 KB 20.3 MB/s eta 0:00:00
+Collecting click>=8.1.3
+  Downloading click-8.1.7-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.9/97.9 KB 24.5 MB/s eta 0:00:00
+Collecting Werkzeug>=3.0.0
+  Downloading werkzeug-3.0.1-py3-none-any.whl (226 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.7/226.7 KB 46.3 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0
+  Downloading MarkupSafe-2.1.5-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Installing collected packages: MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, flask
+Successfully installed Jinja2-3.1.3 MarkupSafe-2.1.5 Werkzeug-3.0.1 blinker-1.7.0 click-8.1.7 flask-3.0.2 itsdangerous-2.1.2
+(teton) smartone@server01:~$ pip install scipy
+Collecting scipy
+  Downloading scipy-1.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.4/38.4 MB 17.9 MB/s eta 0:00:00
+Collecting numpy<1.29.0,>=1.22.4
+  Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.2/18.2 MB 52.3 MB/s eta 0:00:00
+Installing collected packages: numpy, scipy
+Successfully installed numpy-1.26.4 scipy-1.12.0
+(teton) smartone@server01:~$ pip install numpy
+Requirement already satisfied: numpy in ./env/teton/lib/python3.10/site-packages (1.26.4)
+(teton) smartone@server01:~$ cd simulator/
+(teton) smartone@server01:~/simulator$ python app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 288-594-395
+^C(teton) smartone@server01:~/simulatorsudo iptables -L-L
+Chain INPUT (policy DROP)
+target     prot opt source               destination         
+ufw-before-logging-input  all  --  anywhere             anywhere            
+ufw-before-input  all  --  anywhere             anywhere            
+ufw-after-input  all  --  anywhere             anywhere            
+ufw-after-logging-input  all  --  anywhere             anywhere            
+ufw-reject-input  all  --  anywhere             anywhere            
+ufw-track-input  all  --  anywhere             anywhere            
+
+Chain FORWARD (policy DROP)
+target     prot opt source               destination         
+ufw-before-logging-forward  all  --  anywhere             anywhere            
+ufw-before-forward  all  --  anywhere             anywhere            
+ufw-after-forward  all  --  anywhere             anywhere            
+ufw-after-logging-forward  all  --  anywhere             anywhere            
+ufw-reject-forward  all  --  anywhere             anywhere            
+ufw-track-forward  all  --  anywhere             anywhere            
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+ufw-before-logging-output  all  --  anywhere             anywhere            
+ufw-before-output  all  --  anywhere             anywhere            
+ufw-after-output  all  --  anywhere             anywhere            
+ufw-after-logging-output  all  --  anywhere             anywhere            
+ufw-reject-output  all  --  anywhere             anywhere            
+ufw-track-output  all  --  anywhere             anywhere            
+
+Chain ufw-after-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-after-input (1 references)
+target     prot opt source               destination         
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:netbios-ns
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:netbios-dgm
+ufw-skip-to-policy-input  tcp  --  anywhere             anywhere             tcp dpt:netbios-ssn
+ufw-skip-to-policy-input  tcp  --  anywhere             anywhere             tcp dpt:microsoft-ds
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:bootps
+ufw-skip-to-policy-input  udp  --  anywhere             anywhere             udp dpt:bootpc
+ufw-skip-to-policy-input  all  --  anywhere             anywhere             ADDRTYPE match dst-type BROADCAST
+
+Chain ufw-after-logging-forward (1 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warning prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-input (1 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warning prefix "[UFW BLOCK] "
+
+Chain ufw-after-logging-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-after-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-forward (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ACCEPT     icmp --  anywhere             anywhere             icmp destination-unreachable
+ACCEPT     icmp --  anywhere             anywhere             icmp time-exceeded
+ACCEPT     icmp --  anywhere             anywhere             icmp parameter-problem
+ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
+ufw-user-forward  all  --  anywhere             anywhere            
+
+Chain ufw-before-input (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ufw-logging-deny  all  --  anywhere             anywhere             ctstate INVALID
+DROP       all  --  anywhere             anywhere             ctstate INVALID
+ACCEPT     icmp --  anywhere             anywhere             icmp destination-unreachable
+ACCEPT     icmp --  anywhere             anywhere             icmp time-exceeded
+ACCEPT     icmp --  anywhere             anywhere             icmp parameter-problem
+ACCEPT     icmp --  anywhere             anywhere             icmp echo-request
+ACCEPT     udp  --  anywhere             anywhere             udp spt:bootps dpt:bootpc
+ufw-not-local  all  --  anywhere             anywhere            
+ACCEPT     udp  --  anywhere             mdns.mcast.net       udp dpt:mdns
+ACCEPT     udp  --  anywhere             239.255.255.250      udp dpt:1900
+ufw-user-input  all  --  anywhere             anywhere            
+
+Chain ufw-before-logging-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-logging-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-logging-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-before-output (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+ACCEPT     all  --  anywhere             anywhere             ctstate RELATED,ESTABLISHED
+ufw-user-output  all  --  anywhere             anywhere            
+
+Chain ufw-logging-allow (0 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warning prefix "[UFW ALLOW] "
+
+Chain ufw-logging-deny (2 references)
+target     prot opt source               destination         
+RETURN     all  --  anywhere             anywhere             ctstate INVALID limit: avg 3/min burst 10
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 10 LOG level warning prefix "[UFW BLOCK] "
+
+Chain ufw-not-local (1 references)
+target     prot opt source               destination         
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type LOCAL
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type MULTICAST
+RETURN     all  --  anywhere             anywhere             ADDRTYPE match dst-type BROADCAST
+ufw-logging-deny  all  --  anywhere             anywhere             limit: avg 3/min burst 10
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-reject-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-reject-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-reject-output (1 references)
+target     prot opt source               destination         
+
+Chain ufw-skip-to-policy-forward (0 references)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-skip-to-policy-input (7 references)
+target     prot opt source               destination         
+DROP       all  --  anywhere             anywhere            
+
+Chain ufw-skip-to-policy-output (0 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain ufw-track-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-track-input (1 references)
+target     prot opt source               destination         
+
+Chain ufw-track-output (1 references)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             ctstate NEW
+ACCEPT     udp  --  anywhere             anywhere             ctstate NEW
+
+Chain ufw-user-forward (1 references)
+target     prot opt source               destination         
+
+Chain ufw-user-input (1 references)
+target     prot opt source               destination         
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:ssh
+
+Chain ufw-user-limit (0 references)
+target     prot opt source               destination         
+LOG        all  --  anywhere             anywhere             limit: avg 3/min burst 5 LOG level warning prefix "[UFW LIMIT BLOCK] "
+REJECT     all  --  anywhere             anywhere             reject-with icmp-port-unreachable
+
+Chain ufw-user-limit-accept (0 references)
+target     prot opt source               destination         
+ACCEPT     all  --  anywhere             anywhere            
+
+Chain ufw-user-logging-forward (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-logging-input (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-logging-output (0 references)
+target     prot opt source               destination         
+
+Chain ufw-user-output (1 references)
+target     prot opt source               destination         
+(teton) smartone@server01:~/simulator$ 
+(teton) smartone@server01:~/simulator$ ~]# firewall-cmd --state
+~]#: command not found
+(teton) smartone@server01:~/simulator$ firewall-cmd --state
+Command 'firewall-cmd' not found, but can be installed with:
+sudo apt install firewalld
+(teton) smartone@server01:~/simulator$ ufw status
+ERROR: You need to be root to run this script
+(teton) smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+
+(teton) smartone@server01:~/simulator$ sudo apt update
+Hit:1 http://ubuntu.mirror.constant.com jammy InRelease
+Get:2 http://ubuntu.mirror.constant.com jammy-updates InRelease [119 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease                                      
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]                     
+Hit:5 http://ubuntu.mirror.constant.com jammy-backports InRelease
+Get:6 http://ubuntu.mirror.constant.com jammy-security InRelease [110 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease    
+Get:8 http://archive.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+Get:9 http://ubuntu.mirror.constant.com jammy-updates/main amd64 Packages [1,502 kB]
+Get:10 http://ubuntu.mirror.constant.com jammy-updates/universe amd64 Packages [1,059 kB]
+Get:11 http://ubuntu.mirror.constant.com jammy-updates/universe Translation-en [240 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1,502 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1,059 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [240 kB]
+Fetched 6,061 kB in 3s (2,272 kB/s)                         
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+14 packages can be upgraded. Run 'apt list --upgradable' to see them.
+(teton) smartone@server01:~/simulator$ sudo apt install ufw
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+ufw is already the newest version (0.36.1-4ubuntu0.1).
+ufw set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 14 not upgraded.
+(teton) smartone@server01:~/simulator$ sudo apt install ufw^C
+(teton) smartone@server01:~/simulator$ sudo ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? n
+Aborted
+(teton) smartone@server01:~/simulator$ sudo ufw allow 5000/tcp
+Rule added
+Rule added (v6)
+(teton) smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+5000/tcp                   ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+5000/tcp (v6)              ALLOW       Anywhere (v6)             
+
+(teton) smartone@server01:~/simulator$ python app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 288-594-395
+^C(teton) smartone@server01:~/simulator$ ls
+app.py  static  templates
+(teton) smartone@server01:~/simulator$ nano app.py
+(teton) smartone@server01:~/simulator$ python app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://155.138.151.148:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 288-594-395
+99.241.6.34 - - [22/Mar/2024 15:11:21] "GET / HTTP/1.1" 200 -
+99.241.6.34 - - [22/Mar/2024 15:11:22] "GET /static/style.css HTTP/1.1" 200 -
+99.241.6.34 - - [22/Mar/2024 15:11:22] "GET /favicon.ico HTTP/1.1" 404 -
+99.241.6.34 - - [22/Mar/2024 15:11:31] "POST /solve HTTP/1.1" 200 -
+^C(teton) smartone@server01:~/simulator$ pip install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-21.2.0-py3-none-any.whl (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 KB 1.9 MB/s eta 0:00:00
+Collecting packaging
+  Downloading packaging-24.0-py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 KB 4.8 MB/s eta 0:00:00
+Installing collected packages: packaging, gunicorn
+Successfully installed gunicorn-21.2.0 packaging-24.0
+(teton) smartone@server01:~/simulator$ ls
+app.py  static  templates
+(teton) smartone@server01:~/simulator$ 
+(teton) smartone@server01:~/simulator$ ls
+app.py  static  templates
+(teton) smartone@server01:~/simulator$ nano wsgi.py
+(teton) smartone@server01:~/simulator$ gunicorn --bind 0.0.0.0:5000 wsgi:app
+[2024-03-22 15:39:05 +0000] [3402] [INFO] Starting gunicorn 21.2.0
+[2024-03-22 15:39:05 +0000] [3402] [INFO] Listening at: http://0.0.0.0:5000 (3402)
+[2024-03-22 15:39:05 +0000] [3402] [INFO] Using worker: sync
+[2024-03-22 15:39:05 +0000] [3403] [INFO] Booting worker with pid: 3403
+^C[2024-03-22 15:39:27 +0000] [3402] [INFO] Handling signal: int
+[2024-03-22 15:39:27 +0000] [3402] [INFO] Shutting down: Master
+(teton) smartone@server01:~/simulator$ deactivate
+smartone@server01:~/simulator$ sudo nano /etc/systemd/system/app.service
+[sudo] password for smartone: 
+smartone@server01:~/simulator$ sudo systemctl start app
+smartone@server01:~/simulator$ sudo systemctl enable app
+Created symlink /etc/systemd/system/multi-user.target.wants/app.service → /etc/systemd/system/app.service.
+smartone@server01:~/simulator$ sudo systemctll^C
+smartone@server01:~/simulator$ ls
+app.py  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ sudo systemctl status app
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 15:51:43 UTC; 1min 13s ago
+   Main PID: 3528 (code=exited, status=216/GROUP)
+        CPU: 2ms
+
+Mar 22 15:51:43 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed to determine group credentials: No su>
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed at step GROUP spawning /home/smartone>
+Mar 22 15:51:43 server01 systemd[1]: app.service: Main process exited, code=exited, status=216/GR>
+Mar 22 15:51:43 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+lines 1-11/11 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 15:51:43 UTC; 1min 13s ago
+   Main PID: 3528 (code=exited, status=216/GROUP)
+        CPU: 2ms
+
+Mar 22 15:51:43 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed to determine group credentials: No such process
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed at step GROUP spawning /home/smartone/env/teton/bin/gunicorn: No such process
+Mar 22 15:51:43 server01 systemd[1]: app.service: Main process exited, code=exited, status=216/GROUP
+Mar 22 15:51:43 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-11/11 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 15:51:43 UTC; 1min 13s ago
+   Main PID: 3528 (code=exited, status=216/GROUP)
+        CPU: 2ms
+
+Mar 22 15:51:43 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed to determine group credentia>
+Mar 22 15:51:43 server01 systemd[3528]: app.service: Failed at step GROUP spawning /home>
+Mar 22 15:51:43 server01 systemd[1]: app.service: Main process exited, code=exited, stat>
+Mar 22 15:51:43 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-11/11 (END)
+smartone@server01:~/simulator$ getent group wfy-data
+smartone@server01:~/simulator$ getent group wfy-data
+smartone@server01:~/simulator$ getent group wify-data
+smartone@server01:~/simulator$ sudo nano /etc/systemd/system/app.service
+smartone@server01:~/simulator$ 
+smartone@server01:~/simulator$ sudo systemctl start app
+Warning: The unit file, source configuration file or drop-ins of app.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+smartone@server01:~/simulator$ systemctl daemon-reload
+==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ===
+Authentication is required to reload the systemd state.
+Multiple identities can be used for authentication:
+ 1.  guest (ubuntu)
+ 2.  SmartOne Research Project,,, (smartone)
+Choose identity to authenticate as (1-2): 2
+Password: 
+==== AUTHENTICATION COMPLETE ===
+smartone@server01:~/simulator$ sudo systemctl start app
+smartone@server01:~/simulator$ sudo systemctl enable app
+smartone@server01:~/simulator$ sudo systemctl status app
+● app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-03-22 16:03:36 UTC; 21s ago
+   Main PID: 3680 (gunicorn)
+      Tasks: 4 (limit: 1005)
+     Memory: 120.3M
+        CPU: 1.529s
+     CGroup: /system.slice/app.service
+             ├─3680 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gu>
+             ├─3681 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gu>
+             ├─3682 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gu>
+             └─3683 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gu>
+
+Mar 22 16:03:36 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 16:03:36 server01 gunicorn[3680]: [2024-03-22 16:03:36 +0000] [3680] [INFO] Start>
+Mar 22 16:03:36 server01 gunicorn[3680]: [2024-03-22 16:03:36 +0000] [3680] [INFO] Liste>
+Mar 22 16:03:36 server01 gunicorn[3680]: [2024-03-22 16:03:36 +0000] [3680] [INFO] Using>
+Mar 22 16:03:36 server01 gunicorn[3681]: [2024-03-22 16:03:36 +0000] [3681] [INFO] Booti>
+Mar 22 16:03:36 server01 gunicorn[3682]: [2024-03-22 16:03:36 +0000] [3682] [INFO] Booti>
+Mar 22 16:03:36 server01 gunicorn[3683]: [2024-03-22 16:03:36 +0000] [3683] [INFO] Booti>
+smartone@server01:~/simulator$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 nginx-common
+  nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc ssl-cert
+The following NEW packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libnginx-mod-stream-geoip2 nginx nginx-common
+  nginx-core
+0 upgraded, 9 newly installed, 0 to remove and 14 not upgraded.
+Need to get 697 kB of archives.
+After this operation, 2,395 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.4 [40.0 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.4 [11.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.4 [15.4 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.4 [13.7 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.4 [45.7 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.4 [72.9 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.4 [10.1 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.4 [484 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.4 [3,872 B]
+Fetched 697 kB in 1s (930 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package nginx-common.
+(Reading database ... 120895 files and directories currently installed.)
+Preparing to unpack .../0-nginx-common_1.18.0-6ubuntu14.4_all.deb ...
+Unpacking nginx-common (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../4-libnginx-mod-mail_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../5-libnginx-mod-stream_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../7-nginx-core_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking nginx-core (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../8-nginx_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking nginx (1.18.0-6ubuntu14.4) ...
+Setting up nginx-common (1.18.0-6ubuntu14.4) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib/systemd/system/nginx.service.
+Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
+Setting up nginx-core (1.18.0-6ubuntu14.4) ...
+ * Upgrading binary nginx                                                         [ OK ] 
+Setting up nginx (1.18.0-6ubuntu14.4) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Scanning processes...                                                                    
+Scanning linux images...                                                                 
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+smartone@server01:~/simulator$ sudo nano /etc/ngix/sites-available/app.conf
+smartone@server01:~/simulator$ cd /etc/nginx/sites-available/
+smartone@server01:/etc/nginx/sites-available$ ls
+default
+smartone@server01:/etc/nginx/sites-available$ sudo nano app.conf 
+smartone@server01:/etc/nginx/sites-available$ sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
+smartone@server01:/etc/nginx/sites-available$ cd ../..
+smartone@server01:/etc$ cd ..
+smartone@server01:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr
+smartone@server01:/$ cd home/smartone
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/app.conf': File exists
+smartone@server01:~/simulator$ sudo nginx -t
+nginx: [emerg] unexpected end of file, expecting "}" in /etc/nginx/sites-enabled/app.conf:13
+nginx: configuration file /etc/nginx/nginx.conf test failed
+smartone@server01:~/simulator$ nano /etc/nginx/sites-enabled/app.conf
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-enabled/app.conf
+smartone@server01:~/simulator$ sudo nginx -t
+smartone@server01:~/simulator$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+smartone@server01:~/simulator$ sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/app.conf': File exists
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-enabled/app.conf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-enabled/app.conf^C
+smartone@server01:~/simulator$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+smartone@server01:~/simulator$  sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+5000/tcp                   ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+5000/tcp (v6)              ALLOW       Anywhere (v6)             
+
+smartone@server01:~/simulator$ sudo ufw delete allow 5000
+Could not delete non-existent rule
+Could not delete non-existent rule (v6)
+smartone@server01:~/simulator$ sudo ufw delete allow 5000
+Could not delete non-existent rule
+Could not delete non-existent rule (v6)
+smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+5000/tcp                   ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+5000/tcp (v6)              ALLOW       Anywhere (v6)             
+
+smartone@server01:~/simulator$ sudo ufw delete allow 5000/tcp
+Rule deleted
+Rule deleted (v6)
+smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+
+smartone@server01:~/simulator$ sudo ufw allow "nginx full"
+Rule added
+Rule added (v6)
+smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+Nginx Full                 ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+Nginx Full (v6)            ALLOW       Anywhere (v6)             
+
+smartone@server01:~/simulator$ sudo tail /var/log/nginx/error.log
+2024/03/22 16:04:29 [notice] 4119#4119: using inherited sockets from "6;7;"
+2024/03/22 16:12:48 [emerg] 4274#4274: unexpected end of file, expecting "}" in /etc/nginx/sites-enabled/app.conf:13
+2024/03/22 16:18:23 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+smartone@server01:~/simulator$ sudo chmod 775 /home/smartone
+smartone@server01:~/simulator$ sudo tail /var/log/nginx/error.log
+2024/03/22 16:04:29 [notice] 4119#4119: using inherited sockets from "6;7;"
+2024/03/22 16:12:48 [emerg] 4274#4274: unexpected end of file, expecting "}" in /etc/nginx/sites-enabled/app.conf:13
+2024/03/22 16:18:23 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:20:11 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:13 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:15 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:27 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:28 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+smartone@server01:~/simulator$ sudo chmod 775 /home/smartone/
+smartone@server01:~/simulator$ sudo tail /var/log/nginx/error.log
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:20:11 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:13 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:15 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:27 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:28 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:21:24 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:21:27 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:21:33 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+smartone@server01:~/simulator$ ls -l /home/smartone/simulator/app.sock
+srwxrwx--- 1 smartone sudo 0 Mar 22 16:03 /home/smartone/simulator/app.sock
+smartone@server01:~/simulator$ sudo ufw allow 5000
+Rule added
+Rule added (v6)
+smartone@server01:~/simulator$ ufw status
+ERROR: You need to be root to run this script
+smartone@server01:~/simulator$ sudo ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+Nginx Full                 ALLOW       Anywhere                  
+80/tcp                     ALLOW       Anywhere                  
+80                         ALLOW       Anywhere                  
+5000                       ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+Nginx Full (v6)            ALLOW       Anywhere (v6)             
+80/tcp (v6)                ALLOW       Anywhere (v6)             
+80 (v6)                    ALLOW       Anywhere (v6)             
+5000 (v6)                  ALLOW       Anywhere (v6)             
+
+smartone@server01:~/simulator$ ps aux | grep python
+root         803  0.0  1.7  32732 17048 ?        Ss   13:46   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         863  0.0  2.0 109752 19540 ?        Ssl  13:46   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+smartone    3680  0.0  1.8  30780 17648 ?        Ss   16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3681  0.0  6.9 168052 67788 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3682  0.0  6.9 168064 67800 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3683  0.0  6.9 168064 67800 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    4657  0.9  7.2 167992 70420 pts/2    S+   16:33   0:00 python3 app.py
+smartone    4659  1.6  7.3 390212 71632 pts/2    Sl+  16:33   0:01 /home/smartone/env/teton/bin/python3 app.py
+smartone    4720  0.0  0.2   6612  2356 pts/0    S+   16:34   0:00 grep --color=auto python
+smartone@server01:~/simulator$ ls -l /home/smartone/simulator/app.sock
+srwxrwx--- 1 smartone sudo 0 Mar 22 16:03 /home/smartone/simulator/app.sock
+smartone@server01:~/simulator$ exit
+logout
+Connection to arianamiri.com closed.
+➜  ~ ssh 'smartone@arianamiri.com'
+Enter passphrase for key '/Users/ARIAN/.ssh/id_ed25519': 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 04:59:10 PM UTC 2024
+
+  System load:             0.0
+  Usage of /:              32.6% of 22.88GB
+  Memory usage:            36%
+  Swap usage:              0%
+  Processes:               127
+  Users logged in:         0
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Mar 22 15:45:36 2024 from 99.241.6.34
+smartone@server01:~$ nano /etc/nginx/sites-available/app.conf
+smartone@server01:~$ sudo nano /etc/nginx/sites-available/app.conf
+[sudo] password for smartone: 
+smartone@server01:~$ sudo nano /etc/nginx/sites-available/app.conf
+smartone@server01:~$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+smartone@server01:~$ sudo systemctl restart nginx
+smartone@server01:~$ sudo nano /etc/nginx/sites-available/app.conf
+smartone@server01:~$ sudo systemctl reload nginx
+smartone@server01:~$ sudo systemctl restart nginx
+smartone@server01:~$ sudo systemctl reload nginx
+smartone@server01:~$ client_loop: send disconnect: Broken pipe
+➜  ~ ssh 'smartone@arianamiri.com'
+Enter passphrase for key '/Users/ARIAN/.ssh/id_ed25519': 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 11:04:09 PM UTC 2024
+
+  System load:             0.0
+  Usage of /:              32.6% of 22.88GB
+  Memory usage:            33%
+  Swap usage:              1%
+  Processes:               129
+  Users logged in:         0
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Mar 22 16:59:10 2024 from 99.241.6.34
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-available/app.conf
+[sudo] password for smartone: 
+smartone@server01:~/simulator$ ls
+app.py  app.sock  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ cat app.
+cat: app.: No such file or directory
+smartone@server01:~/simulator$ cat app.sock 
+cat: app.sock: Permission denied
+smartone@server01:~/simulator$ sudo cat app.sock 
+cat: app.sock: No such device or address
+smartone@server01:~/simulator$ ls
+app.py  app.sock  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ sudo cat 
+app.py       app.sock     __pycache__/ static/      templates/   wsgi.py      
+smartone@server01:~/simulator$ sudo cat app.sock 
+cat: app.sock: No such device or address
+smartone@server01:~/simulator$ sudo cat app
+cat: app: No such file or directory
+smartone@server01:~/simulator$ sudo nano  app.sock 
+smartone@server01:~/simulator$ cat wsgi.[y
+cat: 'wsgi.[y': No such file or directory
+smartone@server01:~/simulator$ cat wsgi.py
+from app import app
+
+
+if __name__ == '__main__':
+	app.run()
+
+smartone@server01:~/simulator$ sudo nano app.py
+smartone@server01:~/simulator$ cat app.py
+from flask import Flask, render_template, request, jsonify
+import numpy as np
+from scipy.integrate import solve_ivp
+import json
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')  # Render the form
+
+@app.route('/solve', methods=['POST'])
+def solve_ode():
+    # Extract parameters from request
+    data = request.json
+    j = float(data['j'])
+    Kem = float(data['Kem'])
+    Ra = float(data['Ra'])
+    t = float(data['t'])
+    r1 = float(data['r1'])
+    l = float(data['l'])
+    Ks = float(data['Ks'])
+    d = float(data['d'])
+    L = float(data['L'])
+    F = float(data['F'])
+    N = float(data['N'])
+    maximumTime = float(data['maximumTime'])
+    theta_0 = float(data['theta_0'])
+    omega_0 = float(data['omega_0'])
+
+    # Assign the coefficients 
+    a = j
+    b = 2*N*(Kem)**2*r1*(l+t)/Ra
+    c = 2*Ks*r1*d
+    d = F*L
+
+    # Assign finishing time for the graph
+    max_time = maximumTime
+
+
+    # Define the system of ODEs
+    def system_of_odes(t, y):
+        theta, omega = y
+        return [omega, (d - b*omega - c*theta) / a]
+
+    # Initial conditions and time span
+    initial_conditions = [theta_0, omega_0]
+    t_span = [0, max_time]  # Modify as needed
+    t_eval = np.linspace(t_span[0], t_span[1], 300)
+
+    # Solve the ODE
+    solution = solve_ivp(system_of_odes, t_span, initial_conditions, t_eval=t_eval)
+
+    # Convert theta from radians to degrees
+    theta_degrees = solution.y[0] * 180 / np.pi
+
+    # Calculate angular velocity in rpm
+    omega_rpm = solution.y[1] * 60 / (2 * np.pi)
+
+    # Calculate voltage
+    omega = 2 * solution.y[1]  # as omega = 2 * thetadot
+    voltage = Kem * omega
+
+    # Prepare the data for plotting
+    data = {
+        'time': solution.t.tolist(),
+        'theta': theta_degrees.tolist(),
+        'omega': omega_rpm.tolist(),
+        'voltage': voltage.tolist(),
+    }
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
+
+
+smartone@server01:~/simulator$ sudo nano app.py
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-available/app.conf
+smartone@server01:~/simulator$ sudo nano /etc/nginx/sites-available/app.conf^C
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo cd /etc/nginx/sites-available/
+sudo: cd: command not found
+sudo: "cd" is a shell built-in command, it cannot be run directly.
+sudo: the -s option may be used to run a privileged shell.
+sudo: the -D option may be used to run a command in a specific directory.
+smartone@server01:~/simulator$ cd /etc/nginx/sites-available/
+smartone@server01:/etc/nginx/sites-available$ ls
+app.conf  default
+smartone@server01:/etc/nginx/sites-available$ cat default 
+##
+# You should look at the following URL's in order to grasp a solid understanding
+# of Nginx configuration files in order to fully unleash the power of Nginx.
+# https://www.nginx.com/resources/wiki/start/
+# https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/
+# https://wiki.debian.org/Nginx/DirectoryStructure
+#
+# In most cases, administrators will remove this file from sites-enabled/ and
+# leave it as reference inside of sites-available where it will continue to be
+# updated by the nginx packaging team.
+#
+# This file will automatically load configuration files provided by other
+# applications, such as Drupal or Wordpress. These applications will be made
+# available underneath a path with that package name, such as /drupal8.
+#
+# Please see /usr/share/doc/nginx-doc/examples/ for more detailed examples.
+##
+
+# Default server configuration
+#
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	# SSL configuration
+	#
+	# listen 443 ssl default_server;
+	# listen [::]:443 ssl default_server;
+	#
+	# Note: You should disable gzip for SSL traffic.
+	# See: https://bugs.debian.org/773332
+	#
+	# Read up on ssl_ciphers to ensure a secure configuration.
+	# See: https://bugs.debian.org/765782
+	#
+	# Self signed certs generated by the ssl-cert package
+	# Don't use them in a production server!
+	#
+	# include snippets/snakeoil.conf;
+
+	root /var/www/html;
+
+	# Add index.php to the list if you are using PHP
+	index index.html index.htm index.nginx-debian.html;
+
+	server_name _;
+
+	location / {
+		# First attempt to serve request as file, then
+		# as directory, then fall back to displaying a 404.
+		try_files $uri $uri/ =404;
+	}
+
+	# pass PHP scripts to FastCGI server
+	#
+	#location ~ \.php$ {
+	#	include snippets/fastcgi-php.conf;
+	#
+	#	# With php-fpm (or other unix sockets):
+	#	fastcgi_pass unix:/run/php/php7.4-fpm.sock;
+	#	# With php-cgi (or other tcp sockets):
+	#	fastcgi_pass 127.0.0.1:9000;
+	#}
+
+	# deny access to .htaccess files, if Apache's document root
+	# concurs with nginx's one
+	#
+	#location ~ /\.ht {
+	#	deny all;
+	#}
+}
+
+
+# Virtual Host configuration for example.com
+#
+# You can move that to a different file under sites-available/ and symlink that
+# to sites-enabled/ to enable it.
+#
+#server {
+#	listen 80;
+#	listen [::]:80;
+#
+#	server_name example.com;
+#
+#	root /var/www/example.com;
+#	index index.html;
+#
+#	location / {
+#		try_files $uri $uri/ =404;
+#	}
+#}
+smartone@server01:/etc/nginx/sites-available$ sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
+ln: failed to create symbolic link '/etc/nginx/sites-enabled/app.conf': File exists
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl reload nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl reload nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl reload nginx^C
+smartone@server01:/etc/nginx/sites-available$ cd
+smartone@server01:~$ cd 
+.cache/    env/       .local/    simulator/ .ssh/      
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ ls
+app.py  app.sock  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ sudo nano app.py 
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ cd /etc/
+Display all 102 possibilities? (y or n)
+smartone@server01:~/simulator$ cd /etc/nginx/sites-available/
+smartone@server01:/etc/nginx/sites-available$ sudo nano app.conf 
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart nginx
+sudo systemctl restart gunicorn
+Failed to restart gunicorn.service: Unit gunicorn.service not found.
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart gunicorn
+Failed to restart gunicorn.service: Unit gunicorn.service not found.
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart gunicornç^C
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl daemon-reload
+sudo systemctl start gunicorn
+Failed to start gunicorn.service: Unit gunicorn.service not found.
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl start app
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart app
+smartone@server01:/etc/nginx/sites-available$ cd 
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ nano app.py
+smartone@server01:~/simulator$ sudo systemctl status gunicorn
+Unit gunicorn.service could not be found.
+smartone@server01:~/simulator$ sudo systemctl status app
+● app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-03-22 23:22:06 UTC; 1min 45s ago
+   Main PID: 8908 (gunicorn)
+      Tasks: 4 (limit: 1005)
+     Memory: 145.6M
+        CPU: 1.789s
+     CGroup: /system.slice/app.service
+             ├─8908 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8910 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8911 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             └─8912 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+
+Mar 22 23:22:06 server01 systemd[1]: app.service: Deactivated successfully.
+Mar 22 23:22:06 server01 systemd[1]: Stopped Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:06 server01 systemd[1]: app.service: Consumed 7.569s CPU time.
+Mar 22 23:22:06 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Starting gunicorn 21.2.0
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Listening at: unix:app.sock (8908)
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Using worker: sync
+Mar 22 23:22:07 server01 gunicorn[8910]: [2024-03-22 23:22:07 +0000] [8910] [INFO] Booting worker with pid: 8910
+Mar 22 23:22:07 server01 gunicorn[8911]: [2024-03-22 23:22:07 +0000] [8911] [INFO] Booting worker with pid: 8911
+Mar 22 23:22:07 server01 gunicorn[8912]: [2024-03-22 23:22:07 +0000] [8912] [INFO] Booting worker with pid: 8912
+smartone@server01:~/simulator$ sudo systemctl start gunicorn
+Failed to start gunicorn.service: Unit gunicorn.service not found.
+smartone@server01:~/simulator$ sudo systemctl start app
+smartone@server01:~/simulator$ sudo systemctl start gunicorn
+Failed to start gunicorn.service: Unit gunicorn.service not found.
+smartone@server01:~/simulator$ sudo systemctl status app
+● app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-03-22 23:22:06 UTC; 2min 3s ago
+   Main PID: 8908 (gunicorn)
+      Tasks: 4 (limit: 1005)
+     Memory: 145.6M
+        CPU: 1.793s
+     CGroup: /system.slice/app.service
+             ├─8908 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8910 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8911 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             └─8912 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+
+Mar 22 23:22:06 server01 systemd[1]: app.service: Deactivated successfully.
+Mar 22 23:22:06 server01 systemd[1]: Stopped Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:06 server01 systemd[1]: app.service: Consumed 7.569s CPU time.
+Mar 22 23:22:06 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Starting gunicorn 21.2.0
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Listening at: unix:app.sock (8908)
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Using worker: sync
+Mar 22 23:22:07 server01 gunicorn[8910]: [2024-03-22 23:22:07 +0000] [8910] [INFO] Booting worker with pid: 8910
+Mar 22 23:22:07 server01 gunicorn[8911]: [2024-03-22 23:22:07 +0000] [8911] [INFO] Booting worker with pid: 8911
+Mar 22 23:22:07 server01 gunicorn[8912]: [2024-03-22 23:22:07 +0000] [8912] [INFO] Booting worker with pid: 8912
+smartone@server01:~/simulator$ sudo systemctl status app
+● app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-03-22 23:22:06 UTC; 2min 21s ago
+   Main PID: 8908 (gunicorn)
+      Tasks: 4 (limit: 1005)
+     Memory: 145.6M
+        CPU: 1.797s
+     CGroup: /system.slice/app.service
+             ├─8908 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8910 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─8911 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             └─8912 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+
+Mar 22 23:22:06 server01 systemd[1]: app.service: Deactivated successfully.
+Mar 22 23:22:06 server01 systemd[1]: Stopped Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:06 server01 systemd[1]: app.service: Consumed 7.569s CPU time.
+Mar 22 23:22:06 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Starting gunicorn 21.2.0
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Listening at: unix:app.sock (8908)
+Mar 22 23:22:07 server01 gunicorn[8908]: [2024-03-22 23:22:07 +0000] [8908] [INFO] Using worker: sync
+Mar 22 23:22:07 server01 gunicorn[8910]: [2024-03-22 23:22:07 +0000] [8910] [INFO] Booting worker with pid: 8910
+Mar 22 23:22:07 server01 gunicorn[8911]: [2024-03-22 23:22:07 +0000] [8911] [INFO] Booting worker with pid: 8911
+Mar 22 23:22:07 server01 gunicorn[8912]: [2024-03-22 23:22:07 +0000] [8912] [INFO] Booting worker with pid: 8912
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo systemctl restart nginx
+smartone@server01:~/simulator$ sudo systemctl reload nginx
+smartone@server01:~/simulator$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+smartone@server01:~/simulator$ sudo chmod 660 /home/smartone/simulator/app.sockcd^C
+smartone@server01:~/simulator$ sudo nano app.py
+smartone@server01:~/simulator$ cd templates/
+smartone@server01:~/simulator/templates$ sudo nano index.html index.html 
+smartone@server01:~/simulator/templates$ ls
+index.html
+smartone@server01:~/simulator/templates$ sudo nano index.html
+smartone@server01:~/simulator/templates$ sudo systemctl restart nginx
+smartone@server01:~/simulator/templates$ sudo systemctl restart app
+smartone@server01:~/simulator/templates$ sudo systemctl restart nginx
+smartone@server01:~/simulator/templates$ sudo systemctl reload nginx
+smartone@server01:~/simulator/templates$ sudo systemctl restart nginx
+smartone@server01:~/simulator/templates$ sudo systemctl restart nginx
+smartone@server01:~/simulator/templates$ 
+smartone@server01:~/simulator/templates$ 
+smartone@server01:~/simulator/templates$ sudo systemctl restart app
+smartone@server01:~/simulator/templates$ udo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+Command 'udo' not found, but can be installed with:
+sudo apt install udo
+smartone@server01:~/simulator/templates$ udo chown www-data:www-data /home/smartone/simulator/app.^Cck
+smartone@server01:~/simulator/templates$ 
+smartone@server01:~/simulator/templates$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+smartone@server01:~/simulator/templates$ cd 
+smartone@server01:~$ cd /etc/nginx/sites-available/
+smartone@server01:/etc/nginx/sites-available$ sudn nano app.conf 
+Command 'sudn' not found, did you mean:
+  command 'sudo' from deb sudo (1.9.9-1ubuntu2.4)
+  command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.4)
+Try: sudo apt install <deb name>
+smartone@server01:/etc/nginx/sites-available$ sudo nano app.conf 
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl reload nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart nginx
+smartone@server01:/etc/nginx/sites-available$ sudo nano ~/
+.bash_history              .bashrc                    env/                       .profile                   .ssh/                      
+.bash_logout               .cache/                    .local/                    simulator/                 .sudo_as_admin_successful  
+smartone@server01:/etc/nginx/sites-available$ sudo nano ~/simulator/
+app.py       app.sock     __pycache__/ static/      templates/   wsgi.py      
+smartone@server01:/etc/nginx/sites-available$ sudo nano ~/simulator/app.py
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart app
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl reload nginx
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart app
+smartone@server01:/etc/nginx/sites-available$ sudo systemctl restart nginx
+smartone@server01:/etc/nginx/sites-available$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+chown: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+chmod: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+smartone@server01:/etc/nginx/sites-available$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+chown: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+chmod: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+smartone@server01:/etc/nginx/sites-available$ cd
+smartone@server01:~$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 660 /home/smartone/simulator/app.sock
+chown: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+chmod: cannot access '/home/smartone/simulator/app.sock': No such file or directory
+smartone@server01:~$ cd
+smartone@server01:~$ cd simulator/
+smartone@server01:~/simulator$ ls
+app.py  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ sudo nano /etc/systemd/system/
+app.service
+cloud-final.service.wants/
+cloud-init-log-reader.service
+cloud-init.target.wants/
+dbus-org.freedesktop.ModemManager1.service
+dbus-org.freedesktop.resolve1.service
+dbus-org.freedesktop.thermald.service
+dbus-org.freedesktop.timesync1.service
+default.target.wants/
+display-manager.service.wants/
+emergency.target.wants/
+final.target.wants/
+getty.target.wants/
+graphical.target.wants/
+iscsi.service
+mdmonitor.service.wants/
+multipath-tools.service
+multi-user.target.wants/
+network-online.target.wants/
+oem-config.service.wants/
+open-vm-tools.service.requires/
+paths.target.wants/
+rescue.target.wants/
+sleep.target.wants/
+smartd.service
+snap-core20-2105.mount
+snapd.mounts.target.wants/
+snap-lxd-27037.mount
+snap-lxd-27428.mount
+snap.lxd.activate.service
+snap.lxd.daemon.service
+snap.lxd.daemon.unix.socket
+snap.lxd.user-daemon.service
+snap.lxd.user-daemon.unix.socket
+snap-snapd-20671.mount
+sockets.target.wants/
+sshd-keygen@.service.d/
+sshd.service
+sudo.service
+sysinit.target.wants/
+syslog.service
+timers.target.wants/
+vmtoolsd.service
+smartone@server01:~/simulator$ sudo nano /etc/systemd/system/app.service 
+smartone@server01:~/simulator$ ls
+app.py  __pycache__  static  templates  wsgi.py
+smartone@server01:~/simulator$ nano wsgi.py 
+smartone@server01:~/simulator$ sudo systemctl status gunicorn
+Unit gunicorn.service could not be found.
+smartone@server01:~/simulator$ sudo systemctl status app
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind un>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overw>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Work>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Wor>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Wor>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Wor>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shu>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Rea>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, sta>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwrit>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker >
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutti>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.soc>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an >
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worke>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTI>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m >
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an exist>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) >
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) >
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) >
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Mas>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker fai>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEM>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 w>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing e>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 926>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exite>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was s>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was s>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed t>
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:ap>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoin>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SI>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SI>
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint funct>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exite>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: i>
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, stat>
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-17/17 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 6min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+smartone@server01:~/simulator$ nano app.py 
+smartone@server01:~/simulator$ sudo systemctl status app
+× app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Fri 2024-03-22 23:37:17 UTC; 10min ago
+    Process: 9261 ExecStart=/home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app (code=exited, status=3)
+   Main PID: 9261 (code=exited, status=3)
+        CPU: 1.878s
+
+Mar 22 23:37:16 server01 gunicorn[9264]: AssertionError: View function mapping is overwriting an existing endpoint function: index
+Mar 22 23:37:16 server01 gunicorn[9264]: [2024-03-22 23:37:16 +0000] [9264] [INFO] Worker exiting (pid: 9264)
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9262) exited with code 3
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9264) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Worker (pid:9263) was sent SIGTERM!
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Shutting down: Master
+Mar 22 23:37:17 server01 gunicorn[9261]: [2024-03-22 23:37:17 +0000] [9261] [ERROR] Reason: Worker failed to boot.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED
+Mar 22 23:37:17 server01 systemd[1]: app.service: Failed with result 'exit-code'.
+Mar 22 23:37:17 server01 systemd[1]: app.service: Consumed 1.878s CPU time.
+smartone@server01:~/simulator$ sudo systemctl restart app
+smartone@server01:~/simulator$ sudo systemctl status app
+● app.service - Gunicorn instance to serve peak Flask app
+     Loaded: loaded (/etc/systemd/system/app.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2024-03-22 23:48:10 UTC; 1s ago
+   Main PID: 9436 (gunicorn)
+      Tasks: 4 (limit: 1005)
+     Memory: 119.8M
+        CPU: 1.516s
+     CGroup: /system.slice/app.service
+             ├─9436 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─9437 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             ├─9438 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+             └─9439 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+
+Mar 22 23:48:10 server01 systemd[1]: Started Gunicorn instance to serve peak Flask app.
+Mar 22 23:48:10 server01 gunicorn[9436]: [2024-03-22 23:48:10 +0000] [9436] [INFO] Starting gunicorn 21.2.0
+Mar 22 23:48:10 server01 gunicorn[9436]: [2024-03-22 23:48:10 +0000] [9436] [INFO] Listening at: unix:app.sock (9436)
+Mar 22 23:48:10 server01 gunicorn[9436]: [2024-03-22 23:48:10 +0000] [9436] [INFO] Using worker: sync
+Mar 22 23:48:10 server01 gunicorn[9437]: [2024-03-22 23:48:10 +0000] [9437] [INFO] Booting worker with pid: 9437
+Mar 22 23:48:10 server01 gunicorn[9438]: [2024-03-22 23:48:10 +0000] [9438] [INFO] Booting worker with pid: 9438
+Mar 22 23:48:10 server01 gunicorn[9439]: [2024-03-22 23:48:10 +0000] [9439] [INFO] Booting worker with pid: 9439
+smartone@server01:~/simulator$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+sudo chmod 664 /home/smartone/simulator/app.sock
+smartone@server01:~/simulator$ dig arianamiri.com
+
+; <<>> DiG 9.18.18-0ubuntu0.22.04.2-Ubuntu <<>> arianamiri.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 54271
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 65494
+;; QUESTION SECTION:
+;arianamiri.com.			IN	A
+
+;; ANSWER SECTION:
+arianamiri.com.		70	IN	A	155.138.151.148
+
+;; Query time: 112 msec
+;; SERVER: 127.0.0.53#53(127.0.0.53) (UDP)
+;; WHEN: Fri Mar 22 23:55:29 UTC 2024
+;; MSG SIZE  rcvd: 59
+
+smartone@server01:~/simulator$ 

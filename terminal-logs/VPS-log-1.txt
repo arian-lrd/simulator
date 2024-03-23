@@ -1,0 +1,284 @@
+Last login: Fri Mar 22 10:46:47 on ttys010
+➜  ~ ssh smartone@arianamiri.com
+Enter passphrase for key '/Users/ARIAN/.ssh/id_ed25519': 
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-101-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+  System information as of Fri Mar 22 03:45:35 PM UTC 2024
+
+  System load:             0.0
+  Usage of /:              32.5% of 22.88GB
+  Memory usage:            25%
+  Swap usage:              0%
+  Processes:               126
+  Users logged in:         1
+  IPv4 address for enp1s0: 155.138.151.148
+  IPv6 address for enp1s0: 2001:19f0:b002:aa4:5400:4ff:feb8:9e3c
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+15 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri Mar 22 14:38:56 2024 from 99.241.6.34
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd/
+-bash: cd/: No such file or directory
+smartone@server01:~$ cd /
+smartone@server01:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+smartone@server01:/$ cd home
+smartone@server01:/home$ ls
+linuxuser  smartone  ubuntu
+smartone@server01:/home$ cd smartone/
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd ..
+smartone@server01:/home$ ls
+linuxuser  smartone  ubuntu
+smartone@server01:/home$ cd smartone/
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd ..
+smartone@server01:/home$ ls
+linuxuser  smartone  ubuntu
+smartone@server01:/home$ cd sm
+-bash: cd: sm: No such file or directory
+smartone@server01:/home$ cd smartone/
+smartone@server01:~$ ls
+env  simulator
+smartone@server01:~$ cd env
+smartone@server01:~/env$ ls
+teton
+smartone@server01:~/env$ cd teton/
+smartone@server01:~/env/teton$ ls
+bin  include  lib  lib64  pyvenv.cfg
+smartone@server01:~/env/teton$ cd bin
+smartone@server01:~/env/teton/bin$ ls
+activate      activate.fish  f2py   gunicorn  pip3     python   python3.10
+activate.csh  Activate.ps1   flask  pip       pip3.10  python3
+smartone@server01:~/env/teton/bin$ groups smartone
+smartone : smartone sudo
+smartone@server01:~/env/teton/bin$ groups smartone
+smartone : smartone sudo
+smartone@server01:~/env/teton/bin$ cd /home
+smartone@server01:/home$ ls
+linuxuser  smartone  ubuntu
+smartone@server01:/home$ cd /etc/nginx/nginx.conf
+-bash: cd: /etc/nginx/nginx.conf: Not a directory
+smartone@server01:/home$ cd /etc/nginx/nginx.^Cnf
+smartone@server01:/home$ nano /etc/nginx/nginx.conf
+smartone@server01:/home$ caat /etc/nginx/nginx.conf
+Command 'caat' not found, did you mean:
+  command 'claat' from snap claat (v0.7.1)
+  command 'acat' from deb atool (0.39.0-11)
+  command 'chat' from deb ppp (2.4.9-1+1ubuntu3)
+  command 'cat' from deb coreutils (8.32-4.1ubuntu1)
+  command 'ccat' from deb ccrypt (1.11-2)
+See 'snap info <snapname>' for additional versions.
+smartone@server01:/home$ cat /etc/nginx/nginx.conf
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 768;
+	# multi_accept on;
+}
+
+http {
+
+	##
+	# Basic Settings
+	##
+
+	sendfile on;
+	tcp_nopush on;
+	types_hash_max_size 2048;
+	# server_tokens off;
+
+	# server_names_hash_bucket_size 64;
+	# server_name_in_redirect off;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	##
+	# SSL Settings
+	##
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	##
+	# Logging Settings
+	##
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
+
+	##
+	# Gzip Settings
+	##
+
+	gzip on;
+
+	# gzip_vary on;
+	# gzip_proxied any;
+	# gzip_comp_level 6;
+	# gzip_buffers 16 8k;
+	# gzip_http_version 1.1;
+	# gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+	##
+	# Virtual Host Configs
+	##
+
+	include /etc/nginx/conf.d/*.conf;
+	include /etc/nginx/sites-enabled/*;
+}
+
+
+#mail {
+#	# See sample authentication script at:
+#	# http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+#
+#	# auth_http localhost/auth.php;
+#	# pop3_capabilities "TOP" "USER";
+#	# imap_capabilities "IMAP4rev1" "UIDPLUS";
+#
+#	server {
+#		listen     localhost:110;
+#		protocol   pop3;
+#		proxy      on;
+#	}
+#
+#	server {
+#		listen     localhost:143;
+#		protocol   imap;
+#		proxy      on;
+#	}
+#}
+smartone@server01:/home$ cat /etc/nginx/sites-enabled/
+cat: /etc/nginx/sites-enabled/: Is a directory
+smartone@server01:/home$ cat /etc/nginx/sites-enabled/
+app.conf  default   
+smartone@server01:/home$ cat /etc/nginx/sites-enabled/app.conf 
+server {
+    listen 80;
+    server_name arianamiri.com  www.arianamiri.com;  # Change this to your domain or IP >
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/smartone/simulator/app.sock;
+    }
+
+    location /static {
+        alias /home/smartone/simulator/static;  # Change this to your static files direc>
+    }
+}
+smartone@server01:/home$ ufw status
+ERROR: You need to be root to run this script
+smartone@server01:/home$ sudo ufw status
+[sudo] password for smartone: 
+Status: active
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     ALLOW       Anywhere                  
+Nginx Full                 ALLOW       Anywhere                  
+22/tcp (v6)                ALLOW       Anywhere (v6)             
+Nginx Full (v6)            ALLOW       Anywhere (v6)             
+
+smartone@server01:/home$ sudo ufw allow 80/tcp
+Rule added
+Rule added (v6)
+smartone@server01:/home$ sudo ufw allow 80
+Rule added
+Rule added (v6)
+smartone@server01:/home$ sudo systemctl restart nginx
+smartone@server01:/home$ sudo systemctl reload nginx
+smartone@server01:/home$ sudo systemctl restart nginx
+smartone@server01:/home$ cd /home/smartone/simulator/
+smartone@server01:~/simulator$ python app.py
+Command 'python' not found, did you mean:
+  command 'python3' from deb python3
+  command 'python' from deb python-is-python3
+smartone@server01:~/simulator$ python3 app.py
+Traceback (most recent call last):
+  File "/home/smartone/simulator/app.py", line 1, in <module>
+    from flask import Flask, render_template, request, jsonify
+ModuleNotFoundError: No module named 'flask'
+smartone@server01:~/simulator$ activate
+activate: command not found
+smartone@server01:~/simulator$ source ~/env/teton/bin/activate
+(teton) smartone@server01:~/simulator$ python3 app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://155.138.151.148:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 115-296-212
+99.241.6.34 - - [22/Mar/2024 16:34:04] "GET / HTTP/1.1" 200 -
+99.241.6.34 - - [22/Mar/2024 16:34:05] "GET /static/style.css HTTP/1.1" 304 -
+99.241.6.34 - - [22/Mar/2024 16:34:13] "POST /solve HTTP/1.1" 200 -
+^C(teton) smartone@server01:~/simulatorps aux | grep pythonon
+root         803  0.0  1.7  32732 17048 ?        Ss   13:46   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         863  0.0  2.0 109752 19540 ?        Ssl  13:46   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+smartone    3680  0.0  1.8  30780 17648 ?        Ss   16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3681  0.0  6.9 168052 67788 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3682  0.0  6.9 168064 67800 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    3683  0.0  6.9 168064 67800 ?        S    16:03   0:00 /home/smartone/env/teton/bin/python3 /home/smartone/env/teton/bin/gunicorn --workers 3 --bind unix:app.sock -m 007 wsgi:app
+smartone    4725  0.0  0.2   6612  2260 pts/2    S+   16:35   0:00 grep --color=auto python
+(teton) smartone@server01:~/simulator$ cat /var/log/nginx/error.log
+cat: /var/log/nginx/error.log: Permission denied
+(teton) smartone@server01:~/simulator$ sudo cat /var/log/nginx/error.log
+2024/03/22 16:04:29 [notice] 4119#4119: using inherited sockets from "6;7;"
+2024/03/22 16:12:48 [emerg] 4274#4274: unexpected end of file, expecting "}" in /etc/nginx/sites-enabled/app.conf:13
+2024/03/22 16:18:23 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:18:34 [crit] 4300#4300: *1 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:20:11 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:13 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:15 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:27 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:20:28 [crit] 4300#4300: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:21:24 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:21:27 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:21:33 [crit] 4300#4300: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:28:57 [crit] 4300#4300: *15 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:28:57 [crit] 4300#4300: *15 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:29:00 [crit] 4300#4300: *19 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:29:33 [notice] 4628#4628: signal process started
+2024/03/22 16:29:42 [crit] 4638#4638: *2 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:29:46 [crit] 4638#4638: *2 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:32:41 [crit] 4638#4638: *5 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 117.33.163.216, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:33:34 [crit] 4638#4638: *7 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+2024/03/22 16:33:34 [crit] 4638#4638: *8 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET /favicon.ico HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/favicon.ico", host: "arianamiri.com", referrer: "http://arianamiri.com/"
+2024/03/22 16:35:01 [crit] 4638#4638: *11 connect() to unix:/home/smartone/simulator/app.sock failed (13: Permission denied) while connecting to upstream, client: 99.241.6.34, server: arianamiri.com, request: "GET / HTTP/1.1", upstream: "http://unix:/home/smartone/simulator/app.sock:/", host: "arianamiri.com"
+(teton) smartone@server01:~/simulator$ ls -l /home/smartone/simulator/app.sock
+srwxrwx--- 1 smartone sudo 0 Mar 22 16:03 /home/smartone/simulator/app.sock
+(teton) smartone@server01:~/simulator$ sudo chown www-data:www-data /home/smartone/simulator/app.sock
+(teton) smartone@server01:~/simulator$ sudo chmod 660 /home/smartone/simulator/app.sock
+(teton) smartone@server01:~/simulator$ sudo systemctl restart nginx
+(teton) smartone@server01:~/simulator$ 
