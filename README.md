@@ -31,7 +31,7 @@ app = Flask(__name__)
 def smartone_index():
     return render_template('index.html')  # Render the form
 
-/# Define other routes as needed
+\# Define other routes as needed
 @app.route('/')
 def default_index():
     return render_template('index.html')
