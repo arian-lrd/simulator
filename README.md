@@ -20,6 +20,8 @@ Inputs:
 - N: Number of motors
 
 
+# Key notes from deployment:
+
 ## app.py code differences: 
 -> The app.py code on the server is slightly different, it is as follows:
 **1) app routes the beginning of the code:**
@@ -43,7 +45,6 @@ def solve_ode():
    if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
 
-## Key notes from deployment:
 
 ### To fix 502 Bad Gateway:
 -> sudo chown www-data:www-data /home/smartone/simulator/app.sock
